@@ -892,11 +892,13 @@ function balanceAfterTransaction($transaction){
 
     $balanceAfterEveryTransaction = balanceAfterTransaction($transaction);
 
-    // initial balance 5, calculate balance_after_transaction
 
     (float)$day = $transaction[0]['trans_plaid_date'];
-    // Question 2, Laravel
-    //
+//      Question 2, Laravel
+//      Create Laravel function for calculate user closing balance with above data
+// •	Daily closing balance of 90 days
+// •	90 days average balance
+// •	First 30 days and last days average closing balance(0-30 days and 60-90 days )
 
 function dailyUserBalanceForNinetyDays($arr){
     (float)$initial_balance=5;
@@ -955,8 +957,11 @@ function dailyUserBalanceForNinetyDays($arr){
 
 $ninetyDayBalance = dailyUserBalanceForNinetyDays($balanceAfterEveryTransaction);
 
-// <!-- print_r($ninetyDayBalance[0]); -->
-
+// Q3
+//      Create Laravel function for calculate user closing balance with above data
+//  	Daily closing balance of 90 days
+// 	    90 days average balance
+//  	First 30 days and last days average closing balance(0-30 days and 60-90 days )
 
 function sumIncomeOfLastThirtyDaysExceptId($arr, $id){
     (float)$income = 0;
